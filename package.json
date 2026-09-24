@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5101",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 5101"
+    "preview": "vite preview --host 0.0.0.0 --port 5101",
+    "test:rules": "esbuild scripts/smoke.ts --bundle --platform=node --format=cjs --outfile=/tmp/hxwl-smoke.cjs && node /tmp/hxwl-smoke.cjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",
